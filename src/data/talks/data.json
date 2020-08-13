@@ -1,0 +1,27 @@
+{
+  "head": {
+    "title": "Talks - Fábio Matsuda",
+    "description": ""
+  },
+  "title": "Talks.",
+  "talks": [
+    {
+      "id": 1,
+      "slug": "design-leadership",
+      "title": "Sobre liderar e ser humano",
+      "featuredLetter": "L",
+      "featuredTitle": "Design Leadership.",
+      "featuredImage": "https://i.imgur.com/NmeUY3p.png",
+      "url": "#"
+    },
+    {
+      "id": 2,
+      "slug": "ixda-design-leadership",
+      "title": "Design e Liderança (podcast)",
+      "featuredLetter": "P",
+      "featuredTitle": "Design Leadership. (IxDA Podcast)",
+      "featuredImage": "https://i.imgur.com/NmeUY3p.png",
+      "url": "#"
+    }
+  ]
+}

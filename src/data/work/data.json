@@ -1,0 +1,27 @@
+{
+  "head": {
+    "title": "Work - Fábio Matsuda",
+    "description": ""
+  },
+  "title": "Work.",
+  "works": [
+    {
+      "id": 1,
+      "title": "Design Identity",
+      "featuredImage": "https://i.imgur.com/NmeUY3p.png",
+      "url": "#"
+    },
+    {
+      "id": 2,
+      "title": "Fiat App",
+      "featuredImage": "https://i.imgur.com/NmeUY3p.png",
+      "url": "#"
+    },
+    {
+      "id": 3,
+      "title": "Live On",
+      "featuredImage": "https://i.imgur.com/NmeUY3p.png",
+      "url": "#"
+    }
+  ]
+}
