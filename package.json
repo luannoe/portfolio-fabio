@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build && next export"
+    "build": "next build",
+    "export": "next export"
   },
   "dependencies": {
     "@babel/preset-env": "^7.10.4",
