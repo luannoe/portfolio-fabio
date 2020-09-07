@@ -160,12 +160,13 @@ export const talksIntern = css`
         .page-content {
           display: flex;
           flex-direction: column;
-          align-self: flex-end;
           font-family: 'Playfair Display', serif;
           font-size: 14px;
           padding: 8px 0;
+          overflow-wrap: break-word;
 
           @media (min-width: 768px) {
+            align-self: flex-end;
             order: 2;
           }
 

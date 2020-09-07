@@ -25,8 +25,8 @@ export const PasswordModalCss = requestSubmitted => css`
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
   z-index: 999;
   background: rgba(0, 0, 0, 0.8);
   display: flex;
@@ -38,7 +38,7 @@ export const PasswordModalCss = requestSubmitted => css`
     display: flex;
     flex-direction: column;
     background: #f5f5f5;
-    padding: 0 12px;
+    padding: 0 24px;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -57,10 +57,6 @@ export const PasswordModalCss = requestSubmitted => css`
         margin: 0;
         font-size: 64px;
       }
-    }
-
-    @media (min-width: 768px) {
-      padding: 0 24px;
     }
 
     @media (min-width: 1024px) {

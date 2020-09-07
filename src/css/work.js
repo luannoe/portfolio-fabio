@@ -38,6 +38,14 @@ export const page = css`
       padding-left: 8px;
       margin-bottom: 16px;
 
+      &:hover {
+        .featured-image {
+          &:after {
+            background: transparent;
+          }
+        }
+      }
+
       @media (min-width: 1024px) {
         height: 100vh;
       }
@@ -80,6 +88,7 @@ export const page = css`
           width: 100%;
           height: 100%;
           background: rgba(0, 0, 0, 0.5);
+          transition: background 0.3s;
 
           @media (min-width: 1024px) {
             background: rgba(245, 245, 245, 0.5);

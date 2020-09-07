@@ -32,37 +32,37 @@ const animationMenuLineLeave = keyframes`
 
 export const backgroundEnter = css`
   @media (min-width: 1024px) {
-    animation: ${animationBackgroundEnter} 1s ease 0.2s both;
+    animation: ${animationBackgroundEnter} 0.8s ease 0.2s both;
   }
 `;
 
 export const backgroundLeave = css`
   @media (min-width: 1024px) {
-    animation: ${animationBackgroundLeave} 1s ease 0.2s both;
+    animation: ${animationBackgroundLeave} 0.8s ease 0.2s both;
   }
 `;
 
 export const menuItemEnter = index => css`
   @media (min-width: 1024px) {
-    animation: ${animationMenuEnter} 0.3s ease ${(index + 1) / 5}s both;
+    animation: ${animationMenuEnter} 0.25s ease ${(index + 1) / 5}s both;
   }
 `;
 
 export const menuItemLeave = css`
   @media (min-width: 1024px) {
-    animation: ${animationMenuLeave} 0.3s ease both;
+    animation: ${animationMenuLeave} 0.25s ease both;
   }
 `;
 
 export const menuLineEnter = css`
   @media (min-width: 1024px) {
-    animation: ${animationMenuLineEnter} 0.3s ease both;
+    animation: ${animationMenuLineEnter} 0.25s ease both;
   }
 `;
 
 export const menuLineLeave = index => css`
   @media (min-width: 1024px) {
-    animation: ${animationMenuLineLeave} 0.3s ease ${(index + 1) / 5}s both;
+    animation: ${animationMenuLineLeave} 0.25s ease ${(index + 1) / 5}s both;
   }
 `;
 
@@ -179,8 +179,13 @@ export const home = css`
         font-size: 14px;
 
         a {
-          color: #000;
+          color: #797885;
           text-decoration: none;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #000;
+          }
         }
 
         @media (min-width: 1024px) {
@@ -197,6 +202,7 @@ export const home = css`
 
     @media (min-width: 1024px) {
       padding: 128px 0;
+      flex: 0;
     }
 
     &-list {
@@ -314,7 +320,7 @@ export const home = css`
     @media (min-width: 1024px) {
       position: absolute;
       bottom: 40px;
-      left: 40px;
+      left: 128px;
       margin-bottom: 0;
       font-size: 24px;
 
@@ -324,8 +330,13 @@ export const home = css`
     }
 
     a {
-      color: #000;
+      color: #797885;
       text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #000;
+      }
     }
 
     hr {
