@@ -13,7 +13,7 @@
 //     xl: 1256px
 //   ) !default;
 
-export default () => `
+export const Grid = () => `
   @-ms-viewport {
     width: device-width;
   }
@@ -1815,3 +1815,5 @@ export default () => `
     }
   }
 `;
+
+export default Grid;

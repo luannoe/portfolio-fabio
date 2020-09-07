@@ -67,9 +67,11 @@ export const menuLineLeave = index => css`
 `;
 
 export const home = css`
+  position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  justify-content: space-between;
+  height: 100vh;
   padding: 4px 0;
   overflow: hidden;
 
@@ -93,6 +95,12 @@ export const home = css`
     color: #f5f5f5;
 
     @media (min-width: 1024px) {
+      right: 200px;
+      font-size: 32vh;
+      top: -80vh;
+    }
+
+    @media (min-width: 1366px) {
       right: 250px;
       font-size: 22vh;
       top: -44vh;
@@ -129,13 +137,16 @@ export const home = css`
       }
 
       .heading {
+        @media (min-height: 700px) and (max-width: 1023px) {
+          margin-top: 25%;
+        }
+
         h1,
         h2 {
           font-family: 'Playfair Display', serif;
           font-size: 14px;
           margin: 0;
           padding: 0;
-          max-width: 110px;
           text-align: right;
 
           @media (min-width: 1024px) {
@@ -180,6 +191,8 @@ export const home = css`
   }
 
   .menu {
+    flex: 1;
+    display: flex;
     padding: 8px 0;
 
     @media (min-width: 1024px) {
@@ -187,10 +200,16 @@ export const home = css`
     }
 
     &-list {
+      flex: 1;
       display: flex;
       flex-direction: column;
+      justify-content: space-evenly;
       transition: all 0.3s;
       margin: 0;
+
+      @media (min-width: 1024px) {
+        justify-content: flex-end;
+      }
 
       &--item {
         display: flex;
@@ -205,6 +224,10 @@ export const home = css`
 
           @media (min-width: 1024px) {
             padding: 16px 0;
+          }
+
+          @media (min-width: 1920px) {
+            padding: 24px 0;
           }
         }
 
@@ -230,10 +253,14 @@ export const home = css`
           border: 1px solid #000;
           margin: 0 16px 10px;
           transition: all 0.3s;
-          width: 220px;
+          width: 30vw;
 
           @media (min-width: 1024px) {
             display: block;
+          }
+
+          @media (min-width: 1280px) {
+            width: 40vw;
           }
         }
 
@@ -258,7 +285,11 @@ export const home = css`
 
           hr {
             margin-left: 32px;
-            width: 350px;
+            width: 38vw;
+
+            @media (min-width: 1280px) {
+              width: 48vw;
+            }
           }
         }
       }
@@ -269,11 +300,32 @@ export const home = css`
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin: 24px 8px 0 0;
+    margin: 24px 8px 50% 0;
     font-family: 'Playfair Display', serif;
 
+    @media (min-height: 700px) {
+      margin-bottom: 60%;
+    }
+
+    @media (min-height: 900px) {
+      margin-bottom: 30%;
+    }
+
     @media (min-width: 1024px) {
-      display: none;
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      margin-bottom: 0;
+      font-size: 24px;
+
+      hr {
+        display: none;
+      }
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
     }
 
     hr {

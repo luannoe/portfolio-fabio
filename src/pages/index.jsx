@@ -57,7 +57,7 @@ const Home = () => {
           <ul className='links'>
             <li>
               <a
-                href='mailto:fabio@yuji.com'
+                href='mailto:oi@fabiomatsuda.com'
                 title='Enviar e-mail'
                 target='_blank'
                 rel='noreferrer'
@@ -117,7 +117,14 @@ const Home = () => {
 
         <div className='info'>
           <hr />
-          <span>fabio.ud@gmail.com</span>
+          <a
+            href='mailto:oi@fabiomatsuda.com'
+            title='Enviar e-mail'
+            target='_blank'
+            rel='noreferrer'
+          >
+            oi@fabiomatsuda.com
+          </a>
         </div>
       </div>
     </TemplateDefault>

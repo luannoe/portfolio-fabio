@@ -2,55 +2,51 @@ import { css, keyframes } from '@emotion/core';
 
 const scrollEnter = keyframes`
   from {
-    padding-top: 128px;
-    background: transparent;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, .3);
+    background: #fff;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
   }
   to {
-    padding-top: 0px;
     background: #f5f5f5;
-    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, .5);
   }
 `;
 
 const scrollLeaveMobile = keyframes`
   from {
     background: #f5f5f5;
-    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, .5);
   }
   to {
-    background: transparent;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, .3);
+    background: #fff;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
   }
 `;
 
 const scrollEnterMobile = keyframes`
   from {
-    background: transparent;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, .3);
+    background: #fff;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
   }
   to {
     background: #f5f5f5;
-    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, .5);
   }
 `;
 
 const scrollLeave = keyframes`
   from {
-    padding-top: 0px;
     background: #f5f5f5;
-    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, .5);
   }
   to {
-    padding-top: 128px;
-    background: transparent;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, .3);
+    background: #fff;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
   }
 `;
 
 const fontSizeEnter = keyframes`
   from {
-    font-size: 236px;
+    font-size: 144px;
   }
   to {
     font-size: 64px;
@@ -62,7 +58,7 @@ const fontSizeLeave = keyframes`
     font-size: 64px;
   }
   to {
-    font-size: 236px;
+    font-size: 144px;
   }
 `;
 
@@ -77,14 +73,26 @@ export const menuItemEnter = index => css`
   }
 `;
 
-export const header = (top, menuIsOpen) => css`
+export const header = top => css`
   position: fixed;
   background: transparent;
   padding-bottom: 16px;
   z-index: 999;
 
   @media (min-width: 1024px) {
-    padding-top: 128px;
+    padding-top: 32px;
+
+    .container-fluid {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+
+  @media (min-width: 1366px) {
+    .container-fluid {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
   }
 
   &.scroll {
@@ -96,81 +104,13 @@ export const header = (top, menuIsOpen) => css`
     }
   }
 
-  @media (max-width: 1365px) {
-    .container {
-      padding: 0;
-    }
-  }
-
-  .menu-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 64px;
-    height: 64px;
-    cursor: pointer;
-    margin-bottom: 4px;
-    position: relative;
-    z-index: 99999;
-
-    .icon-menu {
-      width: 40px;
-      height: 2px;
-      background: #000;
-      transform: ${menuIsOpen ? 'rotate(45deg)' : 'none'};
-      transition: all 0.3s;
-      position: relative;
-
-      &:before {
-        content: ' ';
-        position: absolute;
-        top: ${menuIsOpen ? '0px' : '8px'};
-        width: 40px;
-        height: 2px;
-        background: #000;
-        transform: ${menuIsOpen ? 'rotate(-90deg)' : 'none'};
-        transition: all 0.3s;
-      }
-    }
-
-    .icon-back {
-      width: 40px;
-      height: 2px;
-      background: #000;
-      transition: all 0.3s;
-      position: relative;
-
-      &:before {
-        content: ' ';
-        position: absolute;
-        top: -4px;
-        left: -1px;
-        width: 14px;
-        height: 2px;
-        background: #000;
-        transform: rotate(-35deg);
-        transition: all 0.3s;
-      }
-
-      &:after {
-        content: ' ';
-        position: absolute;
-        top: -1px;
-        left: -1px;
-        width: 1px;
-        height: 3px;
-        background: #fff;
-      }
-    }
-  }
-
   h1 {
     font-size: 64px;
     margin: 0;
     padding: 0;
 
     @media (min-width: 1024px) {
-      animation: ${top < 200 ? fontSizeLeave : fontSizeEnter} 0.3s ease both;
+      animation: ${top < 50 ? fontSizeLeave : fontSizeEnter} 0.3s ease both;
     }
   }
 

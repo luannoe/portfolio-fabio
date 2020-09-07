@@ -5,7 +5,7 @@ export const page = css`
   padding-bottom: 48px;
 
   @media (min-width: 1024px) {
-    padding-top: 483px;
+    padding-top: 290px;
   }
 
   .content {
@@ -32,7 +32,7 @@ export const page = css`
     h2,
     h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 18px;
+      font-size: 14px;
       font-weight: bold;
       margin: 0;
       padding: 0;
@@ -44,7 +44,7 @@ export const page = css`
 
       @media (min-width: 1024px) {
         font-family: 'Work Sans', sans-serif;
-        font-size: 96px;
+        font-size: 48px;
         font-weight: 300;
       }
     }
@@ -54,16 +54,21 @@ export const page = css`
       flex-direction: column;
       align-self: flex-end;
       font-family: 'Playfair Display', serif;
-      font-size: 18px;
+      font-size: 14px;
       padding: 8px 0;
 
       @media (min-width: 1024px) {
-        font-size: 32px;
+        font-size: 24px;
+
+        margin-left: 15%;
+      }
+
+      @media (min-width: 1366px) {
+        margin-left: 20%;
       }
 
       p {
         align-self: flex-end;
-        max-width: 1024px;
         width: 100%;
       }
 

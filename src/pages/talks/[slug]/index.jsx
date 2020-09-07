@@ -16,10 +16,6 @@ const TalksContent = data => {
     if (!data.content) router.push('/talks');
   }, []);
 
-  const handleClick = () => {
-    router.push('/talks');
-  };
-
   if (data.head && data.content && data.title) {
     return (
       <div css={cs.talksIntern}>
@@ -28,11 +24,10 @@ const TalksContent = data => {
           headTitle={data.head.title}
           headDescription={data.head.description}
           title={data.title}
-          icon='back'
-          onClick={handleClick}
+          backRouter='/talks'
         >
           <div className='content-wrapper'>
-            <div className='container'>
+            <div className='container-fluid'>
               <div className='content'>
                 <hr className='mobile-separator' />
 

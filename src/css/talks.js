@@ -1,6 +1,10 @@
 import { css } from '@emotion/core';
 
 export const page = css`
+  @media (min-width: 1024px) {
+    padding-right: 0;
+  }
+
   .content {
     display: flex;
     flex-direction: column;
@@ -8,6 +12,11 @@ export const page = css`
 
     @media (min-width: 1024px) {
       padding-top: 0;
+      padding-left: 11%;
+    }
+
+    @media (min-width: 1500px) {
+      padding-left: 30%;
     }
 
     .row {
@@ -16,12 +25,13 @@ export const page = css`
 
       @media (min-width: 1024px) {
         justify-content: flex-end;
+        margin-right: 0px;
       }
     }
 
     .col-16 {
       cursor: pointer;
-      height: 70vh;
+      height: 400px;
       display: flex;
       flex-direction: column;
       padding-right: 8px;
@@ -29,6 +39,10 @@ export const page = css`
       margin-bottom: 16px;
 
       @media (min-width: 1024px) {
+        height: 100vh;
+      }
+
+      @media (min-width: 1024px) and (min-height: 900px) {
         height: 95vh;
       }
 
@@ -41,6 +55,14 @@ export const page = css`
         @media (min-width: 1024px) {
           flex: 0 0 31%;
           max-width: 31%;
+          padding-right: 0;
+        }
+      }
+
+      &.col-lg-3 {
+        @media (min-width: 1500px) {
+          flex: 0 0 25%;
+          max-width: 25%;
         }
       }
 
@@ -59,6 +81,10 @@ export const page = css`
           width: 100%;
           height: 100%;
           background: rgba(0, 0, 0, 0.5);
+
+          @media (min-width: 1024px) {
+            background: rgba(255, 255, 255, 0.5);
+          }
         }
 
         &:before {
@@ -74,28 +100,28 @@ export const page = css`
 
         .featured-letter {
           font-family: 'Playfair Display', sans-serif;
-          font-weight: bold;
-          font-size: 256px;
+          font-weight: 700;
+          font-size: 280px;
           position: absolute;
           bottom: calc(50% - 150px);
-          left: -32px;
+          left: -38px;
 
           @media (min-width: 1024px) {
-            left: 4px;
-            bottom: -20px;
+            left: -50px;
+            bottom: -30px;
           }
         }
 
         .featured-title {
           font-family: 'Playfair Display', sans-serif;
           font-weight: bold;
-          font-size: 46px;
+          font-size: 48px;
           position: absolute;
           transform: rotate(-90deg);
           transform-origin: bottom right;
           right: 4px;
-          bottom: 370px;
-          width: 350px;
+          bottom: 74vh;
+          width: 73vh;
           display: block;
         }
       }
@@ -118,19 +144,20 @@ export const page = css`
             font-size: 72px;
             position: absolute;
             top: 0;
-            left: 8px;
+            left: 16px;
           }
 
           &:last-of-type {
             font-family: 'Playfair Display', sans-serif;
             font-weight: bold;
-            font-size: 42px;
+            font-size: 48px;
             position: relative;
             transform: rotate(-90deg);
             transform-origin: bottom right;
             right: 12px;
-            width: 400px;
-            bottom: 400px;
+            min-width: 380px;
+            max-width: 380px;
+            bottom: 390px;
           }
         }
 

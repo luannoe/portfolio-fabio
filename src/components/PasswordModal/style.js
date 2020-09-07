@@ -21,7 +21,7 @@ const bounce = keyframes`
   }
 `;
 
-export const PasswordModalCss = css`
+export const PasswordModalCss = requestSubmitted => css`
   position: fixed;
   top: 0;
   left: 0;
@@ -42,6 +42,13 @@ export const PasswordModalCss = css`
     position: relative;
     width: 100%;
     height: 100vh;
+
+    .submitted-message {
+      display: ${requestSubmitted ? 'block' : 'none'};
+      margin-top: 32px;
+      font-weight: bold;
+      font-size: 14px;
+    }
 
     header {
       .title {
@@ -87,7 +94,7 @@ export const PasswordModalCss = css`
 
     section {
       flex: 1;
-      display: flex;
+      display: ${requestSubmitted ? 'none' : 'flex'};
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -136,6 +143,21 @@ export const PasswordModalCss = css`
         &.invalid {
           animation: ${bounce} 0.5s ease;
           border-bottom-color: red;
+
+          ::placeholder {
+            color: red;
+            opacity: 1; /* Firefox */
+          }
+
+          :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: red;
+          }
+
+          ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: red;
+          }
         }
 
         ::placeholder {

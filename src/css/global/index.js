@@ -3,7 +3,7 @@ import Normalize from './normalize';
 import GridSystem from './gridSystem';
 import Font from './font';
 
-export default (theme = {}) => css`
+export const GlobalCss = (theme = {}) => css`
   ${Normalize(theme)}
   ${GridSystem(theme)}
   ${Font(theme)}
@@ -12,3 +12,5 @@ export default (theme = {}) => css`
     cursor: pointer;
   }
 `;
+
+export default GlobalCss;

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import TemplateDefault from './TemplateDefault';
@@ -8,12 +9,11 @@ const Template = ({
   headTitle,
   headDescription,
   title,
-  icon,
-  onClick,
+  backRouter,
   children
 }) => (
   <TemplateDefault title={headTitle} description={headDescription}>
-    {withHeader && <Header title={title} icon={icon} onClick={onClick} />}
+    {withHeader && <Header title={title} backRouter={backRouter} />}
     {children && children}
   </TemplateDefault>
 );
@@ -24,7 +24,7 @@ Template.propTypes = {
   headDescription: PropTypes.string,
   title: PropTypes.string,
   icon: PropTypes.string,
-  onClick: PropTypes.func
+  backRouter: PropTypes.string
 };
 
 Template.defaultProps = {

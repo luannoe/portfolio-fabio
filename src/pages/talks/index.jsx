@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Template from '@components/Template';
+import RawHtml from '@components/RawHtml';
 import * as cs from '@css/talks';
 import data from '@data/talks/data.json';
 import { pathOr } from 'ramda';
@@ -21,12 +22,12 @@ const Talks = () => {
       headDescription={data.head.description}
       title={data.title}
     >
-      <div className='container' css={cs.page}>
+      <div className='container-fluid' css={cs.page}>
         <div className='content'>
           <div className='row'>
             {pathOr([], ['talks'], data).map((talk, index) => (
               <div
-                className='col-16 col-md-4'
+                className='col-16 col-md-4 col-lg-3'
                 key={talk.id}
                 onClick={() => handleClick(talk.slug)}
               >
@@ -34,7 +35,9 @@ const Talks = () => {
                   <span className='featured-letter'>{talk.featuredLetter}</span>
 
                   {width >= 1024 && (
-                    <span className='featured-title'>{talk.featuredTitle}</span>
+                    <RawHtml tag='span' className='featured-title'>
+                      {talk.featuredTitle}
+                    </RawHtml>
                   )}
                 </div>
                 <div className='heading'>
@@ -43,7 +46,9 @@ const Talks = () => {
                       <span>
                         {index < 10 ? `0${index + 1}`.slice(-2) : index}.
                       </span>
-                      <span>{talk.featuredTitle}</span>
+                      <RawHtml tag='span'>
+                        {talk.mobileFeaturedTitle || talk.featuredTitle}
+                      </RawHtml>
                     </>
                   ) : (
                     <>

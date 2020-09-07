@@ -22,7 +22,7 @@ export const talksIntern = css`
   }
 
   .content-wrapper {
-    .container {
+    .container-fluid {
       padding-top: 60px;
       padding-bottom: 48px;
 
@@ -31,12 +31,20 @@ export const talksIntern = css`
       }
 
       @media (min-width: 1024px) {
-        padding-top: 483px;
+        padding-top: 290px;
       }
 
       .content {
         display: flex;
         flex-direction: column;
+
+        @media (min-width: 1024px) {
+          padding-left: 15%;
+        }
+
+        @media (min-width: 1366px) {
+          padding-left: 20%;
+        }
 
         .mobile-separator {
           border-bottom: 2px solid #000;
@@ -55,22 +63,21 @@ export const talksIntern = css`
           background: #f5f5f5;
           height: 224px;
           width: calc(100% + 24px);
-          padding: 32px 8px;
+          padding: 8px;
           margin-left: -12px;
           overflow: hidden;
 
           @media (min-width: 768px) {
-            margin-left: -24px;
-            height: 624px;
-            width: calc(100% + 48px);
-            padding: 182px 8px 182px 480px;
+            margin-left: 0;
+            height: 396px;
+            width: 100%;
+            padding: 100px 20px 100px 290px;
             order: 0;
           }
 
-          @media (min-width: 1024px) {
-            margin-left: 0;
-            width: calc(100% + 40px);
-            padding: 182px 52px 182px 480px;
+          @media (min-width: 1500px) {
+            padding: 180px 20px 180px 40%;
+            height: 550px;
           }
 
           h3 {
@@ -88,27 +95,42 @@ export const talksIntern = css`
 
           .letter {
             font-family: 'Playfair Display', serif;
+            font-weight: bold;
             position: absolute;
             z-index: 1;
             font-size: 300px;
-            bottom: -50px;
-            right: -50px;
+            top: -50px;
+            right: -56px;
 
             @media (min-width: 768px) {
               font-size: 600px;
               right: unset;
-              left: 64px;
-              bottom: 0;
+              top: unset;
+              left: -80px;
+              bottom: -170px;
+            }
+
+            @media (min-width: 1280px) {
+              left: 12px;
+            }
+
+            @media (min-width: 1500px) {
+              bottom: -70px;
+              left: 10%;
             }
           }
 
           .spotify-link {
             display: none;
             position: absolute;
-            bottom: 106px;
+            bottom: 50px;
 
             @media (min-width: 768px) {
               display: block;
+            }
+
+            @media (min-width: 1500px) {
+              bottom: 120px;
             }
           }
         }
@@ -122,24 +144,16 @@ export const talksIntern = css`
           text-align: right;
 
           @media (min-width: 768px) {
+            font-family: 'Work Sans', serif;
+            font-weight: 300;
             order: 1;
             position: relative;
-            font-size: 24px;
+            font-size: 48px;
             margin-top: 48px;
-            text-align: left;
+            text-align: right;
             display: flex;
             align-items: center;
-            padding-left: 82px;
-
-            &:before {
-              content: ' ';
-              position: absolute;
-              left: 0;
-              margin-top: 2px;
-              height: 2px;
-              width: 64px;
-              background: #000;
-            }
+            justify-content: flex-end;
           }
         }
 
@@ -148,7 +162,7 @@ export const talksIntern = css`
           flex-direction: column;
           align-self: flex-end;
           font-family: 'Playfair Display', serif;
-          font-size: 18px;
+          font-size: 14px;
           padding: 8px 0;
 
           @media (min-width: 768px) {
@@ -156,12 +170,11 @@ export const talksIntern = css`
           }
 
           @media (min-width: 1024px) {
-            font-size: 32px;
+            font-size: 24px;
           }
 
           p {
             align-self: flex-end;
-            max-width: 1024px;
             width: 100%;
 
             a {

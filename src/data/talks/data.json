@@ -10,7 +10,7 @@
       "slug": "design-leadership",
       "title": "Sobre liderar e ser humano",
       "featuredLetter": "L",
-      "featuredTitle": "Design Leadership.",
+      "featuredTitle": "Design<br>Leadership.",
       "featuredImage": "https://i.imgur.com/NmeUY3p.png",
       "url": "#"
     },
@@ -19,7 +19,8 @@
       "slug": "ixda-design-leadership",
       "title": "Design e Liderança (podcast)",
       "featuredLetter": "P",
-      "featuredTitle": "Design Leadership. (IxDA Podcast)",
+      "mobileFeaturedTitle": "Design Leadership.<br>(IxDA Podcast)",
+      "featuredTitle": "Design Leadership.<br>(IxDA Podcast)",
       "featuredImage": "https://i.imgur.com/NmeUY3p.png",
       "url": "#"
     }

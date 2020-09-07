@@ -17,7 +17,7 @@ MenuIcon.propTypes = {
 };
 
 MenuIcon.defaultProps = {
-  icon: 'menu'
+  icon: 'back'
 };
 
 export default React.memo(MenuIcon);
